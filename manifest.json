@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "JSONInsight",
+    "version": "1.0",
+    "description": "JSONInsight is a powerful browser extension designed to automatically detect and analyze JSON data directly from websites. Whether you're a developer or data enthusiast, JSONInsight simplifies your workflow by providing intuitive visualization tools and seamless operations on JSON objects, right in your browser. Easily inspect, manipulate, and extract insights from JSON data without leaving your web page.",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+      "128": "icons/icon128.png"
+    }
+    },
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": [
+      "http://localhost:3000/*"
+    ]
+  }
+  
