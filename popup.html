@@ -1,19 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JSON API Extension</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON API Extension</title>
+    <style>
+        /* Set the width and height of the popup window */
+        body {
+            width: 400px;
+            /* Set the desired width */
+            height: 600px;
+            /* Set the desired height */
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        #data {
+            width: 100%;
+            height: 200px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        #response {
+            margin-top: 15px;
+            color: green;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <h1>Post Data to Server</h1>
-  <form id="dataForm">
-    <label for="data">JSON Data:</label><br>
-    <textarea id="data" rows="5" cols="30"></textarea><br>
-    <button type="submit">Send</button>
-  </form>
-  <div id="response"></div>
-  <script src="popup.js"></script>
+    <h1>JSON Insight</h1>
+    <div class="tabs">
+        <button class="tab-button" tab-name="extract">Extract</button>
+        <button class="tab-button" tab-name="edit">Edit</button>
+        <button class="tab-button" tab-name="view">View</button>
+        <button class="tab-button" tab-name="export">Export</button>
+    </div>
+    <div class="tab-content">
+        <div class="tab-panel" id="extract">
+            This is Extract.
+            <form id="dataForm">
+                <label for="data">JSON Data:</label><br>
+                <textarea id="data" rows="5" cols="30"></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+            <div id="response"></div>
+        </div>
+        <div class="tab-panel" id="edit">
+            This is Edit.
+        </div>
+        <div class="tab-panel" id="view">
+            This is View.
+        </div>
+        <div class="tab-panel" id="export">
+            This is Export.
+        </div>
+    </div>
+    <script src="popup.js"></script>
 </body>
+
 </html>
